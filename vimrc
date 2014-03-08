@@ -15,17 +15,23 @@ Bundle 'gmarik/vundle'
 " My bundles here:
 "
 " original repos on GitHub
+Bundle 'croaky/vim-colors-github'
+Bundle 'danro/rename.vim'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'bling/vim-airline'
+Bundle 'scrooloose/syntastic'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'vim-scripts/php.vim-html-enhanced'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'othree/html5.vim'
+Bundle 'bling/vim-airline'
+
 " ...
 
 " Set filetype detection on, load plugins and indent.
@@ -38,9 +44,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Tabs, Spaces and Indentation.
 set expandtab " Use spaces for tabs.
-set tabstop=3 " Number of spaces to use for tabs.
-set shiftwidth=3 " Number of spaces to autoindent.
-set softtabstop=3 " Number of spaces for a tab.
+set tabstop=2 " Number of spaces to use for tabs.
+set shiftwidth=2 " Number of spaces to autoindent.
+set softtabstop=2 " Number of spaces for a tab.
 set autoindent " Set autoindenting on.
 set smartindent
 
@@ -166,17 +172,6 @@ imap <tab> <C-x><C-o>
 
 " More useful command-line completion
 " set wildmenu
-
-" Auto-completion menu
-" set wildmode=list:longest
-
-" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
-" set completeopt=longest,menuone
-" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-"   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-" inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-"   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 " Map escape key to jj -- much faster
 imap jj <esc>
