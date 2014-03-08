@@ -1,0 +1,17 @@
+[user]
+	email       = chamnan.nop@gmail.com
+	name        = Chamnan
+[github]
+   user        = chamnan.nop@gmail.com
+[color]
+	ui          = auto
+	branch      = auto
+	diff        = auto
+	interactive = auto
+	status      = auto
+[alias]
+   l           = log --pretty=colored 
+   lf          = log --pretty=colored --name-only
+   st          = status
+[pretty]
+   colored     = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
