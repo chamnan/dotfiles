@@ -13,7 +13,7 @@ sudo apt-get install git-core curl zsh vim xclip
 ####Install:
 
 ```
-curl https://raw.github.com/chamnan/dotfiles/master/install.sh | sh
+curl https://raw.github.com/chamnan/dotfiles-ruby/master/install.sh | sh
 
 # Bundle Installation
 vim +BundleInstall +qall
