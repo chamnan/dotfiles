@@ -15,22 +15,23 @@ Bundle 'gmarik/vundle'
 " My bundles here:
 "
 " original repos on GitHub
-Bundle 'croaky/vim-colors-github'
-Bundle 'danro/rename.vim'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-haml'
+Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'othree/html5.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/ctags.vim'
-Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
+Bundle 'vim-scripts/tComment'
 
 " ...
 
@@ -243,3 +244,14 @@ map <C-z> u
 
 " Vim completion popup menu enhancement
 set completeopt=menuone
+
+if has("autocmd")
+
+	autocmd FileType ruby,eruby,haml set omnifunc=rubycomplete#Complete
+	autocmd FileType ruby,eruby,haml let g:rubycomplete_buffer_loading = 1
+	autocmd FileType ruby,eruby,haml let g:rubycomplete_rails = 1
+	autocmd FileType ruby,eruby,haml let g:rubycomplete_classes_in_global = 1
+	autocmd FileType ruby,eruby,haml let g:rubycomplete_include_object = 1
+	autocmd FileType ruby,eruby,haml let g:rubycomplete_include_objectspace = 1
+
+endif
