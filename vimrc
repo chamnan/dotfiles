@@ -32,6 +32,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/tComment'
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'vim-scripts/php.vim-html-enhanced'
 
 " ...
 
