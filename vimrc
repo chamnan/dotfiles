@@ -170,8 +170,16 @@ nmap <space> :
 " Automatically change current directory to that of the file in the buffer
 " autocmd BufEnter * cd %:p:h
 
-" Map code completion to , + tab
-imap <tab> <C-x><C-o>
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " More useful command-line completion
 " set wildmenu
@@ -227,6 +235,9 @@ iab Teh The
 "--------------------------"
 " PERSONAL SETTINGS 
 " -------------------------"
+
+" On/Off Paste mode
+set pastetoggle=<F2>
 
 "Clear search Highlight
 nnoremap <silent><Leader><space> :noh<CR>
