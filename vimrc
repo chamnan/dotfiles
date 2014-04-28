@@ -236,6 +236,10 @@ iab Teh The
 " PERSONAL SETTINGS 
 " -------------------------"
 
+" Switching Tab
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
 " On/Off Paste mode
 set pastetoggle=<F2>
 
