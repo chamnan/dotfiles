@@ -23,7 +23,7 @@ To set zsh as your default shell
 ```
 chsh -s /bin/zsh
 ```
-To swich between **zsh** and **bash**
+To switch between **zsh** and **bash**
 ```
 exec bash
 exec zsh
