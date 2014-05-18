@@ -95,6 +95,9 @@ alias gsta='git stash'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 
+alias gso='git show'
+compdef _git gso=git-show
+
 # Will cd into the top of the current repository
 # or submodule.
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
