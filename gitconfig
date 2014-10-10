@@ -15,3 +15,5 @@
    st          = status
 [pretty]
    colored     = format:%Cred%h%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset
+[fetch]
+    prune = true
