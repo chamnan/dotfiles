@@ -77,6 +77,7 @@ compdef _git gm=git-merge
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 alias gclean='git reset --hard && git clean -dfx'
+alias gclone='git clone'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 #remove the gf alias
