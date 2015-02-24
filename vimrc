@@ -167,22 +167,13 @@ map c <c-_><c-_>
 " Saves time; maps the spacebar to colon
 nmap <space> :
 
-" Automatically change current directory to that of the file in the buffer
-" autocmd BufEnter * cd %:p:h
-
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<C-x>\<C-o>"
-    endif
-endfunction
-
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-
-" More useful command-line completion
-" set wildmenu
+" omni completion
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+      \ "\<lt>C-n>" :
+      \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+      \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+      \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 
 " Map escape key to jj -- much faster
 imap jj <esc>
