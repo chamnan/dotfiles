@@ -210,8 +210,6 @@ nmap <silent>nt :NERDTreeToggle<CR>
 
 " Show hidden files in NerdTree
 let NERDTreeShowHidden=1
-" To open file in new tab
-let NERDTreeMapOpenInTab='<ENTER>'
 
 " autopen NERDTree and focus cursor in new document
 autocmd VimEnter * NERDTree
