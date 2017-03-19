@@ -45,13 +45,13 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(laravel4 composer git tmux apache2-ubuntu)
+plugins=(laravel composer git tmux apache2-ubuntu)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -73,3 +73,7 @@ export PATH=$HOME/.composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Tmux Alias
 alias tmux="TERM=screen-256color-bce tmux"
+
+[[ ":$PATH:" != *"$HOME/.composer/vendor/bin"* ]] && PATH="$HOME/.composer/vendor/bin:${PATH}"
+[[ ":$PATH:" != *"$HOME/.config/composer/vendor/bin"* ]] && PATH="$HOME/.config/composer/vendor/bin:${PATH}"
+
